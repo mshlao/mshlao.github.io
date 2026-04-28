@@ -1,0 +1,117 @@
+/* Form Container Styles */
+.contact-form-wrapper {
+    max-width: 100%;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: #1a1a2e;
+}
+
+.required {
+    color: #dc2626;
+}
+
+/* Input field base styles */
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 0.75rem;
+    border: 2px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: inherit;
+    transition: all 0.3s ease;
+    background-color: white;
+}
+
+/* Blue border when user clicks into a field */
+input:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+/* GREEN border when input is valid (user has typed something correct) */
+input:not(:placeholder-shown):valid,
+textarea:not(:placeholder-shown):valid,
+select:not(:placeholder-shown):valid {
+    border-color: #10b981;
+    background-color: #f0fdf4;
+}
+
+/* RED border when input is invalid (user typed but it's wrong) */
+input:not(:placeholder-shown):invalid,
+textarea:not(:placeholder-shown):invalid,
+select:not(:placeholder-shown):invalid {
+    border-color: #dc2626;
+    background-color: #fef2f2;
+}
+
+/* Error message text (hidden by default) */
+.error-msg {
+    font-size: 0.875rem;
+    color: #dc2626;
+    display: none;
+    margin-top: 0.25rem;
+}
+
+/* Show error message when field is invalid and not empty */
+input:not(:placeholder-shown):invalid ~ .error-msg,
+textarea:not(:placeholder-shown):invalid ~ .error-msg,
+select:not(:placeholder-shown):invalid ~ .error-msg {
+    display: block;
+}
+
+/* File input special styling */
+input[type="file"] {
+    padding: 0.5rem;
+    border: 2px dashed #d1d5db;
+    background: #ffffff;
+    cursor: pointer;
+}
+
+input[type="file"]:hover {
+    border-color: #2563eb;
+    background: #eff6ff;
+}
+
+.field-hint {
+    font-size: 0.75rem;
+    color: #6b7280;
+    font-style: italic;
+    display: block;
+    margin-top: 0.25rem;
+}
+
+/* Submit button */
+.btn-submit {
+    width: 100%;
+    background-color: #2563eb;
+    color: white;
+    padding: 0.875rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-submit:hover {
+    background-color: #1d4ed8;
+    transform: translateY(-2px);
+}
+
+.btn-submit:active {
+    transform: translateY(0);
+}
